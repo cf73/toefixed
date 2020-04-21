@@ -1,0 +1,52 @@
+title: Project
+sections:
+  main:
+    display: Main
+    fields:
+      heros:
+        container: main
+        folder: img
+        restrict: false
+        type: assets
+        instructions: 'Project must feature one or two ''hero'' images. If project only has one image, use this as the ''hero'' and don''t upload it in the Images section.'
+        display: 'Hero Image(s)'
+      description:
+        buttons:
+          - h2
+          - h3
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: serif
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: true
+        semantic_elements: false
+        container: main
+        folder: img
+        restrict_assets: false
+        type: bard
+        display: Description
+      price:
+        type: list
+        display: Price
+      copyright:
+        type: text
+        display: Copyright
+      movie:
+        type: video
+        display: Movie
+      images:
+        container: main
+        folder: img
+        restrict: false
+        type: assets
+        display: Images
+taxonomies: true

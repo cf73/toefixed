@@ -1,0 +1,51 @@
+
+<div class="row">
+     <div class="col-lg-11  description">
+        <!-- <h1>{{title}}</h1> -->
+        {{what-is-toe}} 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <!-- <div class="row">
+            <div class="col">
+                <h1>available works</h1>
+                <p>to order, please <a href="mailto:tockerse@risd.edu?Subject=TOE%20Order">contact</a> tom</p>
+            </div>     
+        </div> -->
+        <div class="row center">
+            <div class="col projects">
+                {{collection:projects}}
+                
+                        <div class="item">
+                            <a href="{{url}}">
+                                <div class="itemImage">
+                                    {{heros limit="1"}}
+                                    <img src='{{ glide:value width="454" height="402" fit="crop-50-50" }}' width="100%" alt="">
+                                {{/heros}}
+                                </div>
+                            </a>
+                            <div class="itemText">
+                                <h2>{{title}}</h2>
+                            </div>
+                        </div>
+                
+                {{/collection:projects}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home">
+    
+
+    
+</div>
+
+
+ 
+<!-- <div class="images">
+    {{pages}}
+        <a class="link" href="{{url}}">{{title}}</a>
+    {{/pages}}
+</div> -->

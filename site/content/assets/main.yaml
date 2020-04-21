@@ -1,0 +1,10 @@
+title: 'Main Assets'
+path: assets
+url: /assets
+assets:
+  img/LightOfHope/00_lofh.jpg:
+    title: 'Light of Hope for Indonesia'
+    alt: 'Light of Hope for Indonesia'
+    focus: 50-33
+  img/Silh/Silh_01.jpg:
+    focus: 43-25

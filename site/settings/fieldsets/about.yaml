@@ -1,0 +1,36 @@
+sections:
+  main:
+    display: Main
+    fields:
+      about_tom_text:
+        buttons:
+          - h2
+          - h3
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: serif
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: true
+        semantic_elements: false
+        container: main
+        folder: img
+        restrict_assets: false
+        type: bard
+        display: 'About Tom text'
+      image:
+        container: main
+        folder: img
+        restrict: false
+        type: assets
+        display: Image
+taxonomies: true
+title: About

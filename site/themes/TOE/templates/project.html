@@ -1,0 +1,84 @@
+
+
+<div class="row">
+    <div class="col-xs-3">
+       
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            {{heros}}
+                <div class="col">
+                    <img class="imgHeight" src="{{ glide:value width='1200' height='auto' }}" alt="{{title}}">
+                </div>
+            {{/heros}}
+        </div>
+        <div class="row">
+            <div class="offset-lg-1 col-lg-4 order-lg-2">
+                <h1>{{title}}</h1>
+    
+                <h3>{{copyright}}</h3>
+                    {{price}}
+                       <h3 style="margin-bottom: 30px">{{value}}</h3>
+                    {{/price}}
+            </div>
+            <div class="col-lg-7  order-lg-1">
+                    {{description}}
+                </div>
+        </div>
+
+        {{ if movie }}
+            <div class="row">
+                <div id="movie" class="col">
+                    {{ if video | is_embeddable }}
+                    <!-- Youtube and Video -->
+                    <iframe src="{{ movie | embed_url }}" ...></iframe>
+                    {{ else }}
+                        <!-- Other HTML5 video types -->
+                        <video src="{{ movie | embed_url }}" controls autoplay loop width="100%" ></video>
+                    {{ /if }}
+                </div>
+            </div>
+        {{ /if }}
+        
+        <div class="row">
+            <div class="col">
+                <div class="images">        
+                    {{images}}
+                        <img class="imgHeight" src='{{ glide:value width="1200" height="auto" }}' alt="">
+                    {{/images}}
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+
+    
+ 
+ 
+<!-- <div class="navigation">
+        
+    <h1>available works</h1>
+    <p>to order, please <a href="mailto:tockerse@risd.edu?Subject=TOE%20Order">contact</a> tom</p>
+    {{pages from="/"}}
+    <a href="{{url}}">
+         <div class="item">
+             <div class="itemImage">
+                 {{images limit="1"}}
+                    <img src='{{ glide:value width="400" height="400" fit="crop-50-50" }}' alt="">
+                {{/images}}
+             </div>
+             <div class="itemText">
+                     <h2>{{title}}</h2>
+                     {{price}}
+                     <p class="meta">{{value}}</p>
+                     {{/price}}
+             </div>
+         </div>
+     </a>
+    {{/pages}}
+</div> -->
