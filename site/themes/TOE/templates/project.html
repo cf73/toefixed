@@ -16,13 +16,31 @@
             {{/heros}}
         </div>
         <div class="row">
-            <div class="offset-lg-1 col-lg-4 order-lg-2">
+            <div style="text-align: center;" class="offset-lg-1 col-lg-4 order-lg-2">
                 <h1>{{title}}</h1>
     
                 <h3>{{copyright}}</h3>
-                    {{price}}
-                       <h3 style="margin-bottom: 30px">{{value}}</h3>
-                    {{/price}}
+                    <br>
+                {{if price}}
+                    <h3>Price: ${{price}}</h3>
+                    <h3>{{price_description}}</h3>
+                    <br>
+                       
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="cfulbroo@alumni.risd.edu">
+                    <input type="hidden" name="lc" value="US">
+                    <input type="hidden" name="item_name" value="{{title}}">
+                    <input type="hidden" name="amount" value="{{price}}">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="button_subtype" value="services">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="shipping" value="{{shipping}}">
+                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                {{/if}}
             </div>
             <div class="col-lg-7  order-lg-1">
                     {{description}}
@@ -60,25 +78,3 @@
     
  
  
-<!-- <div class="navigation">
-        
-    <h1>available works</h1>
-    <p>to order, please <a href="mailto:tockerse@risd.edu?Subject=TOE%20Order">contact</a> tom</p>
-    {{pages from="/"}}
-    <a href="{{url}}">
-         <div class="item">
-             <div class="itemImage">
-                 {{images limit="1"}}
-                    <img src='{{ glide:value width="400" height="400" fit="crop-50-50" }}' alt="">
-                {{/images}}
-             </div>
-             <div class="itemText">
-                     <h2>{{title}}</h2>
-                     {{price}}
-                     <p class="meta">{{value}}</p>
-                     {{/price}}
-             </div>
-         </div>
-     </a>
-    {{/pages}}
-</div> -->

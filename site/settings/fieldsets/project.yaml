@@ -35,8 +35,15 @@ sections:
         type: bard
         display: Description
       price:
-        type: list
+        type: integer
         display: Price
+      price_description:
+        type: text
+        display: 'Price description'
+      shipping:
+        type: integer
+        display: Shipping
+        default: '20'
       copyright:
         type: text
         display: Copyright
